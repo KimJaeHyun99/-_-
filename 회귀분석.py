@@ -27,8 +27,6 @@ data.info()
 x = data.drop(['MEDV'], axis = 1)
 y = data['MEDV']
 
-# from sklearn.cross_validation import train_test_split
-# 서브모듈 cross_validation은 model_selection으로 이름이 변경되었고, 사용이 권장되지 않는다.
 from sklearn.model_selection import train_test_split
 
 xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size = 0.2, random_state = 0)
@@ -46,8 +44,6 @@ regressor.fit(xtrain, ytrain)
 # 테스트 결과 예측
 y_pred = regressor.predict(xtest)
 
-# 예측 결과를 보여주기 위한 산점도 그리기
-# 'ytrue' 값 대 'y_pred' 값
 plt.scatter(ytest, y_pred, c='green')
 plt.xlabel("가격: 천 달러 단위($1000)")
 plt.ylabel("예측된 값")
