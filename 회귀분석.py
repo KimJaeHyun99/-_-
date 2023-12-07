@@ -57,3 +57,4 @@ MAE = mean_absolute_error(ytest, y_pred)
 print("평균 제곱 오차: ", MSE)
 print("평균 절대 오차: ", MAE)
 print("정확도: ", 100-MSE)
+
